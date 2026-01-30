@@ -24,11 +24,33 @@ Copilot Autopsy performs a deep forensic analysis ("autopsy") of any GitHub repo
 - Node.js 18+
 - GitHub CLI with Copilot extension
 
-```bash
-# Install GitHub CLI (if not installed)
-brew install gh
+### Install GitHub CLI
 
-# Login to GitHub
+#### macOS
+```bash
+brew install gh
+```
+
+#### Linux (Debian/Ubuntu)
+```bash
+sudo apt install gh
+```
+
+#### Linux (Fedora)
+```bash
+sudo dnf install gh
+```
+
+#### Windows
+```powershell
+winget install GitHub.cli
+# or download from: https://cli.github.com/
+```
+
+### Setup GitHub Copilot CLI
+
+```bash
+# Login to GitHub (all platforms)
 gh auth login
 
 # Install Copilot CLI extension
@@ -39,7 +61,7 @@ gh extension install github/gh-copilot
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/copilot-autopsy.git
+git clone https://github.com/xdarwin13/copilot-autopsy.git
 cd copilot-autopsy
 
 # Install dependencies
@@ -47,6 +69,9 @@ npm install
 
 # Install globally (makes 'autopsy' command available everywhere)
 npm install -g .
+
+# On Linux/macOS if permission denied:
+sudo npm install -g .
 ```
 
 ## Usage
