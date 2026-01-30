@@ -42,10 +42,27 @@ sudo dnf install gh
 ```
 
 #### Windows
+
+**Option 1: Using winget (Windows 10/11)**
 ```powershell
-winget install GitHub.cli
-# or download from: https://cli.github.com/
+winget install --id GitHub.cli
 ```
+
+**Option 2: Using Chocolatey**
+```powershell
+choco install gh
+```
+
+**Option 3: Using Scoop**
+```powershell
+scoop install gh
+```
+
+**Option 4: Direct Download (Recommended if others fail)**
+1. Go to: https://cli.github.com/
+2. Click "Download for Windows"
+3. Run the `.msi` installer
+4. Restart your terminal after installation
 
 ### Setup GitHub Copilot CLI
 

@@ -103,9 +103,18 @@ brew install gh
 sudo apt install gh
 ```
 
-**Windows:**
+**Windows (choose one):**
 ```powershell
-winget install GitHub.cli
+# Option 1: winget (Windows 10/11)
+winget install --id GitHub.cli
+
+# Option 2: Chocolatey
+choco install gh
+
+# Option 3: Scoop
+scoop install gh
+
+# Option 4: Download installer from https://cli.github.com/
 ```
 
 #### 2. Setup Copilot CLI
