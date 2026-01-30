@@ -1,0 +1,45 @@
+{
+  "name": "copilot-autopsy",
+  "version": "1.0.0",
+  "description": "A terminal-first forensic analysis tool for GitHub repositories, powered by GitHub Copilot CLI",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "copilot-autopsy": "./bin/copilot-autopsy.js",
+    "autopsy": "./bin/copilot-autopsy.js"
+  },
+  "scripts": {
+    "start": "node bin/copilot-autopsy.js",
+    "dev": "node bin/copilot-autopsy.js --verbose",
+    "test": "node --test test/**/*.test.js",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+  "keywords": [
+    "github",
+    "copilot",
+    "cli",
+    "code-analysis",
+    "security",
+    "code-quality",
+    "forensics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.1.0",
+    "glob": "^10.3.10",
+    "handlebars": "^4.7.8",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
