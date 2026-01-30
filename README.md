@@ -66,12 +66,28 @@ scoop install gh
 
 ### Setup GitHub Copilot CLI
 
+> ⚠️ **Important for Windows users:** GitHub CLI and Copilot CLI are separate. You must install Copilot as an extension.
+
 ```bash
-# Login to GitHub (all platforms)
+# Step 1: Login to GitHub (all platforms)
 gh auth login
 
-# Install Copilot CLI extension
+# Step 2: Verify you're logged in
+gh auth status
+
+# Step 3: Install Copilot CLI extension
 gh extension install github/gh-copilot
+```
+
+**Windows users:** When installing the Copilot extension, you will be asked:
+1. "Authenticate Git with your GitHub credentials?" → Type `Y`
+2. Copy the one-time code shown (e.g., `0E19-8A42`)
+3. Press Enter to open browser
+4. Paste the code and authorize
+
+```bash
+# Step 4: Verify Copilot works
+gh copilot -p "test"
 ```
 
 ## Installation
